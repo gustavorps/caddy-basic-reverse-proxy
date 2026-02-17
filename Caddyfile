@@ -18,6 +18,8 @@
 	lb_retries 100
 	lb_try_duration 10s
 	lb_try_interval 250ms
+	lb_retry_match header X-Idempotent-Retry true
+	request_buffers 256K
 }
 
 (passive_health_checks) {
